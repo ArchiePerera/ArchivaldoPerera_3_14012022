@@ -1,0 +1,73 @@
+@use "../utils/variables";
+@use "../components/btn-submit";
+
+.hero {
+    background-color: variables.$main-background;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem;
+
+    }
+    h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+    p {
+        font-weight: lighter;
+        text-align: center;
+        padding-bottom: 1.6rem; 
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (min-width: 900px) {
+    .hero {;
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        &__text {
+            h1 {
+                text-align: left;
+            }
+            p {
+                text-align: left;
+                max-width: 500px;
+            }
+        }
+        &__btn {
+            height: 100%;
+        }
+    }  
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        &__wrapper {
+            max-width: 1440px;
+            margin: auto;
+        }
+        &__text{
+
+
+            h1 {
+                font-size: 1.7rem;
+                text-align: left;
+            }
+            p {
+                font-size: 1.3rem;
+                text-align: left;
+                max-width: 650px;
+            }
+        }
+    }
+}

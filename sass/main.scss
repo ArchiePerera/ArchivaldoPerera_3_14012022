@@ -1,44 +1,5 @@
-@use "./utils/variables";
 @import "./base/typography";
 @import "./base/base";
 @import "./layouts/header";
+@import "./layouts/hero";
 
-
-/* hero */
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    background-color: variables.$main-background;
-    h1 {
-        margin-top: 0;
-        font-size: 1.2rem;
-        text-align: center;
-        width: 70%;
-        margin: auto;
-        padding-top: 2rem; 
-    }
-    p {
-        font-weight: lighter;
-        text-align: center;
-        padding-top: 1rem; 
-    }
-    &__btn {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 3rem;
-    }
-}
-
-/* button submit */
-
-.btn-submit {
-    padding: 0.7rem;
-    border: none;
-    border-radius: 25px;
-    color: white;
-    font-weight: bold;
-    font-size: 0.8rem;
-    background-color: red;
-}
