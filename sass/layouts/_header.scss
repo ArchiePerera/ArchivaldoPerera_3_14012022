@@ -1,0 +1,54 @@
+/* Header */
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.banner {
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &__header-logo {
+        font-size: 2rem;
+        padding: 0.4rem 0; 
+    }
+    &__header-return {
+        position: absolute;
+        font-size: 1.2rem;
+        left: 0.5rem;
+        top: 1rem; 
+    }
+    a {
+        color: black;
+    }
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background-color: #EAEAEA;
+    @include mixins.location__inner-shadow;
+    &__label {
+        input {
+            border: none;
+            padding-top: 0.15rem;
+            &::placeholder {
+                font-size: 0.85rem;
+                font-weight: normal;
+                color: black;
+                opacity: 1;
+                background-color: variables.$location-background;
+            }
+            &:focus {
+                outline: none;
+            }        
+        }
+    }
+    &__marker {
+        font-size: 0.8rem;
+        margin-left: 4rem;
+    }
+}
