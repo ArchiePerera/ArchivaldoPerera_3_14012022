@@ -1,5 +1,32 @@
-body {
-  background-color: red;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner {
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.banner__header-logo {
+  font-family: "shrikhand", cursive, sans-serif;
+  font-size: 2rem;
+  padding: 0.6rem 0;
+}
+.banner__header-return {
+  position: absolute;
+  font-size: 1.2rem;
+  left: 0.5rem;
+  top: 1rem;
+}
+.banner a {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
