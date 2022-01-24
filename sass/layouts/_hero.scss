@@ -1,5 +1,5 @@
 @use "../utils/variables";
-@use "../components/btn-submit";
+@use "../utils/mixins";
 
 .hero {
     background-color: variables.$main-background;
@@ -7,7 +7,6 @@
         display: flex;
         flex-direction: column;
         padding: 2.5rem;
-
     }
     h1 {
         font-size: 1.2rem;
@@ -16,14 +15,19 @@
         padding-bottom: 1rem;
     }
     p {
-        font-weight: lighter;
+        font-size: 0.9rem;
+        font-weight:300;
         text-align: center;
-        padding-bottom: 1.6rem; 
+        padding-bottom: 1.5rem; 
     }
     &__btn {
         display: flex;
         justify-content: center;
+        .btn-submit {
+            @include mixins.btn-submit
+        }
     }
+
 }
 
 
@@ -41,7 +45,7 @@
             }
             p {
                 text-align: left;
-                max-width: 500px;
+                max-width: 400px;
             }
         }
         &__btn {
@@ -50,7 +54,7 @@
     }  
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
     .hero {
         &__wrapper {
             max-width: 1440px;
@@ -66,7 +70,7 @@
             p {
                 font-size: 1.3rem;
                 text-align: left;
-                max-width: 650px;
+                max-width: 550px;
             }
         }
     }
