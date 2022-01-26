@@ -1,7 +1,9 @@
 @use "../utils";
+//@use not working with maps
+@import "../utils/maps";
 
 .hero {
-    background-color: utils.$main-background;
+    background-color: utils.$grey-lighter;
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -30,7 +32,7 @@
 }
 
 
-@media (min-width: 900px) {
+@media (min-width: map-get($breakpoints, tablet)) {
     .hero {;
         &__wrapper {
             display: flex;
@@ -53,7 +55,7 @@
     }  
 }
 
-@media (min-width: 1300px) {
+@media (min-width: map-get($breakpoints, desktop)) {
     .hero {
         &__wrapper {
             max-width: 1440px;

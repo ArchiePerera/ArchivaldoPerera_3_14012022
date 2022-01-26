@@ -1,8 +1,12 @@
 @use "../utils";
+//@use not working with maps
+@import "../utils/maps";
 
+
+//Header
 .banner {
     width: 100%;
-    min-width: 300px;
+    min-width: map-get($breakpoints, mobile);
     display: flex;
     justify-content: center;
     position: relative;
@@ -21,14 +25,15 @@
     }
 }
 
+//Location section
 .location {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 0.8rem;
-    background-color: #EAEAEA;
-    @include utils.location__inner-shadow;
+    background-color: utils.$grey;
+    @include utils.inset-shadow;
     &__label {
         input {
             border: none;
@@ -38,7 +43,7 @@
                 font-weight: normal;
                 color: black;
                 opacity: 1;
-                background-color: utils.$location-background;
+                background-color: utils.$grey;
             }
             &:focus {
                 outline: none;
