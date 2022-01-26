@@ -1,0 +1,32 @@
+@use "../utils";
+
+footer {
+    color: white;
+    background-color: utils.$grey-darker;
+    padding-bottom: 3rem;
+    & h4 {
+        padding: 1rem 0 1rem 0;
+        margin-left: 5%;
+    }
+    & ul {
+        list-style: none;
+        li {
+            margin-bottom: 0.3rem;
+        }
+    }
+    & a {
+        color: white;
+    }
+}
+
+.footer {
+    &__content {
+        margin-left: 5%;    
+    }
+    &__partnership {
+        
+    }
+    &__site-info {
+        font-weight: lighter;
+    }
+}

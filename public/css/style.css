@@ -311,5 +311,30 @@ main .articles {
     width: 100%;
   }
 }
+footer {
+  color: white;
+  background-color: #353535;
+  padding-bottom: 3rem;
+}
+footer h4 {
+  padding: 1rem 0 1rem 0;
+  margin-left: 5%;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin-bottom: 0.3rem;
+}
+footer a {
+  color: white;
+}
+
+.footer__content {
+  margin-left: 5%;
+}
+.footer__site-info {
+  font-weight: lighter;
+}
 
 /*# sourceMappingURL=style.css.map */
