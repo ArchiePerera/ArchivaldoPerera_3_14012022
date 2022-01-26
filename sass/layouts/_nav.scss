@@ -17,6 +17,7 @@ nav{
         li {
             display: flex;
             margin: 1rem auto;
+            margin-left: 0.5rem;
             counter-increment: listCounter;
             position: relative;
             &:hover {

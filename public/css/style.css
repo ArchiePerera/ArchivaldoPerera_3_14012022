@@ -30,6 +30,8 @@ a {
 }
 .banner__header-logo {
   font-size: 2rem;
+  font-weight: bold;
+  font-stretch: condensed;
   padding: 0.4rem 0;
 }
 .banner__header-return {
@@ -54,10 +56,11 @@ a {
 .location__label input {
   border: none;
   padding-top: 0.15rem;
+  background-color: transparent;
 }
 .location__label input::placeholder {
   font-size: 0.85rem;
-  font-weight: normal;
+  font-weight: bold;
   color: black;
   opacity: 1;
   background-color: #EAEAEA;
@@ -159,6 +162,7 @@ nav .function ol {
 nav .function li {
   display: flex;
   margin: 1rem auto;
+  margin-left: 0.5rem;
   counter-increment: listCounter;
   position: relative;
 }

@@ -12,6 +12,8 @@
     position: relative;
     &__header-logo {
         font-size: 2rem;
+        font-weight: bold;
+        font-stretch: condensed;
         padding: 0.4rem 0; 
     }
     &__header-return {
@@ -38,9 +40,10 @@
         input {
             border: none;
             padding-top: 0.15rem;
+            background-color: transparent;
             &::placeholder {
                 font-size: 0.85rem;
-                font-weight: normal;
+                font-weight: bold;
                 color: black;
                 opacity: 1;
                 background-color: utils.$grey;
