@@ -1,5 +1,4 @@
-@use "../utils/variables";
-@use "../utils/mixins";
+@use "../utils";
 
 .banner {
     width: 100%;
@@ -29,7 +28,7 @@
     gap: 1rem;
     padding: 0.8rem;
     background-color: #EAEAEA;
-    @include mixins.location__inner-shadow;
+    @include utils.location__inner-shadow;
     &__label {
         input {
             border: none;
@@ -39,7 +38,7 @@
                 font-weight: normal;
                 color: black;
                 opacity: 1;
-                background-color: variables.$location-background;
+                background-color: utils.$location-background;
             }
             &:focus {
                 outline: none;

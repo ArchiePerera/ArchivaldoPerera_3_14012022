@@ -1,8 +1,7 @@
-@use "../utils/variables";
-@use "../utils/mixins";
+@use "../utils";
 
 .hero {
-    background-color: variables.$main-background;
+    background-color: utils.$main-background;
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -24,7 +23,7 @@
         display: flex;
         justify-content: center;
         .btn-submit {
-            @include mixins.btn-submit
+            @include utils.btn-submit
         }
     }
 

@@ -165,6 +165,9 @@ nav .function button {
   background-color: transparent;
   border: none;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 nav .function button::before {
   content: counter(listCounter);
@@ -190,6 +193,7 @@ nav .function button i {
 }
 nav .function button span {
   padding-left: 80px;
+  font-size: 0.8rem;
 }
 nav .function__btn {
   padding: 1.5em;
@@ -204,10 +208,10 @@ nav .function__btn:hover {
   background-color: #F5EDFF;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1360px) {
   ol {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: space-between;
   }
   ol li {
@@ -215,7 +219,7 @@ nav .function__btn:hover {
     justify-content: center;
   }
   ol li span {
-    left: -80px;
+    padding-left: -80px;
   }
 }
 @media (min-width: 900px) {
@@ -224,7 +228,7 @@ nav .function__btn:hover {
     justify-content: center;
   }
   li span {
-    left: -80px;
+    padding-left: -60px;
   }
 }
 main {
@@ -252,14 +256,14 @@ main h2 {
 
 @media (min-width: 900px) {
   .articles {
-    max-width: 1300px;
+    max-width: 1440px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
   .articles article {
-    max-width: 600px;
+    max-width: 700px;
   }
 
   .card {
