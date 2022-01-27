@@ -370,23 +370,29 @@ main .articles {
 .menu__card-content {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1%;
+  padding: 1rem 1rem;
 }
 .menu__card-content-text {
   white-space: nowrap;
   overflow: hidden;
 }
 .menu__card-content-text h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu__card-content-text p {
+  font-size: 0.9rem;
   white-space: nowrap;
   overflow: hidden;
   font-weight: lighter;
   text-overflow: ellipsis;
+}
+.menu__card-price {
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
 }
 
 .main__order {
