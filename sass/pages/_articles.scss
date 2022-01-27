@@ -62,6 +62,7 @@ main {
     }
 }
 
+//Component "New"
 .new {
     &::before {
         content: "Nouveau";
@@ -73,7 +74,20 @@ main {
         right: 0;
         top: 0;
         margin: 0.9rem;
+    }
 }
+
+//Component "Like"
+//Source https://cssgradient.io/blog/css-gradient-text/
+//property not supported officially
+//-webkit-linear-gradient(#eee, #333) - original code
+.fill {
+    &:hover {
+    font-weight: 900;
+    background: utils.$linear-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
 }
 
 @media (min-width: map-get($breakpoints, tablet)) {

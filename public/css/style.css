@@ -314,6 +314,13 @@ main .articles {
   margin: 0.9rem;
 }
 
+.fill:hover {
+  font-weight: 900;
+  background: linear-gradient(180deg, rgba(255, 121, 218, 0.9066760493) 14%, rgba(147, 86, 220, 0.7442110633) 99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (min-width: 768px) {
   main .articles {
     display: grid;
