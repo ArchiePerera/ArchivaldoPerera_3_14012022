@@ -320,11 +320,6 @@ main .articles {
     width: 100%;
   }
 }
-main {
-  padding: 0;
-  background-color: white;
-}
-
 .title__img img {
   width: 100%;
   height: 40vh;
