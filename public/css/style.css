@@ -259,6 +259,7 @@ main .articles {
   padding: 0 5%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 1rem;
 }
 
@@ -330,15 +331,41 @@ footer ul {
 footer ul li {
   margin-bottom: 0.3rem;
 }
+footer ul li .fas {
+  margin-right: 0.5rem;
+}
 footer a {
   color: white;
 }
 
 .footer__content {
-  margin-left: 5%;
+  margin: 0 5%;
 }
 .footer__site-info {
   font-weight: lighter;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__content {
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__partnership ul {
+    display: flex;
+    gap: 3em;
+  }
+  .footer__site-info ul {
+    display: flex;
+    gap: 3em;
+    padding-right: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

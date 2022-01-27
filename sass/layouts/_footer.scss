@@ -1,4 +1,6 @@
 @use "../utils";
+//@use not working with maps
+@import "../utils/maps";
 
 footer {
     color: white;
@@ -12,6 +14,9 @@ footer {
         list-style: none;
         li {
             margin-bottom: 0.3rem;
+            .fas {
+                margin-right: 0.5rem;
+            }
         }
     }
     & a {
@@ -21,12 +26,37 @@ footer {
 
 .footer {
     &__content {
-        margin-left: 5%;    
-    }
-    &__partnership {
-        
+        margin: 0 5%;    
     }
     &__site-info {
         font-weight: lighter;
+    }
+}
+
+@media screen and (min-width: map-get($breakpoints, tablet)) {
+    .footer {
+        &__content {
+            margin: 0 5%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($breakpoints, desktop)) {
+    .footer {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__partnership ul {
+            display: flex;
+            gap: 3em;
+        }
+        &__site-info ul {
+            display: flex;
+            gap: 3em;
+            padding-right: 1rem;
+        }
     }
 }
