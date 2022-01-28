@@ -1,0 +1,78 @@
+@use "../utils";
+//@use not working with maps
+@import "../utils/maps";
+
+.hero {
+    background-color: utils.$grey-lighter;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem;
+    }
+    h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+    p {
+        font-size: 0.9rem;
+        font-weight:300;
+        text-align: center;
+        padding-bottom: 1.5rem; 
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        .btn-submit {
+            @include utils.btn-submit
+        }
+    }
+
+}
+
+
+@media (min-width: map-get($breakpoints, tablet)) {
+    .hero {;
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        &__text {
+            h1 {
+                text-align: left;
+            }
+            p {
+                text-align: left;
+                max-width: 400px;
+            }
+        }
+        &__btn {
+            height: 100%;
+        }
+    }  
+}
+
+@media (min-width: map-get($breakpoints, desktop)) {
+    .hero {
+        &__wrapper {
+            max-width: 1440px;
+            margin: auto;
+        }
+        &__text{
+
+
+            h1 {
+                font-size: 1.7rem;
+                text-align: left;
+            }
+            p {
+                font-size: 1.3rem;
+                text-align: left;
+                max-width: 550px;
+            }
+        }
+    }
+}

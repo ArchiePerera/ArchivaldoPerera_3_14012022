@@ -6,32 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood - Le délice des sens</title>
     <script src="https://kit.fontawesome.com/ac33e92e0d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../public/css/_normalize.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
 <body>
 
     <header>
-        <div class="header__return">
-            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-        </div>
-        <div class="header__logo">
-            <p>Ohmyfood</p>
+        <div class="banner">
+            <div class="banner__header-return">
+                <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="banner__header-logo">
+                <p>Ohmyfood</p>
+            </div>
         </div>
     </header>
 
     <main>
         <div class="title">
             <div class="title__img">
-                <img src="assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Gastronomie française">
-            </div>
-            <div class="title__content">
-                <h1>Le délice des sens</h1>
-                <div class="title__like">
-                    <i class="far fa-heart"></i>
-                </div>
+                <img src="../public/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Gastronomie française">
             </div>
         </div>
 
         <div class="menu">
+            <div class="menu__name">
+                <h1>Le délice des sens</h1>
+                <div class="menu__name-like">
+                    <i class="fill far fa-heart"></i>
+                </div>
+            </div>
             <div class="menu__starter">
                 <h2>Entrées</h2>
                 <div class="menu__card">
@@ -160,12 +164,10 @@
                     </a>
                 </div>
             </div>
+            <div class="main__order">
+                <button class="main__btn btn-submit">Commander</button>
+            </div>
         </div>
-
-        <div class="main__btn">
-            <button class="main__btn btn-submit">Commander</button>
-        </div>
-
     </main>
 
     <footer>
@@ -173,8 +175,8 @@
         <div class="footer__content">
             <div class="footer__partnership">
                 <ul>
-                    <li><a href="#"><span>Proposer un restaurant</span></a></li>
-                    <li><a href="#"><span>Devenir partenaire</span></a></li>
+                    <li><a href="#"><i class="fas fa-utensils"></i><span>Proposer un restaurant</span></a></li>
+                    <li><a href="#"><i class="fas fa-hands-helping"></i><span>Devenir partenaire</span></a></li>
                 </ul>
             </div>
             <div class="footer__site-info">

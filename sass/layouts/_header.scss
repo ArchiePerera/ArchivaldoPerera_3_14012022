@@ -1,0 +1,59 @@
+@use "../utils";
+//@use not working with maps
+@import "../utils/maps";
+
+//Header
+.banner {
+    width: 100%;
+    min-width: map-get($breakpoints, mobile);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &__header-logo {
+        font-size: 2rem;
+        font-weight: bold;
+        font-stretch: condensed;
+        padding: 0.4rem 0; 
+    }
+    &__header-return {
+        position: absolute;
+        font-size: 1.2rem;
+        left: 0.5rem;
+        top: 1rem; 
+    }
+    a {
+        color: black;
+    }
+}
+
+//Location section
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background-color: utils.$grey;
+    @include utils.inset-shadow;
+    &__label {
+        input {
+            border: none;
+            padding-top: 0.15rem;
+            background-color: transparent;
+            &::placeholder {
+                font-size: 0.85rem;
+                font-weight: bold;
+                color: black;
+                opacity: 1;
+                background-color: utils.$grey;
+            }
+            &:focus {
+                outline: none;
+            }        
+        }
+    }
+    &__marker {
+        font-size: 0.8rem;
+        margin-left: 4rem;
+    }
+}

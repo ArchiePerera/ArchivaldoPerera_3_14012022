@@ -1,0 +1,116 @@
+@use "../utils";
+//@use not working with maps
+@import "../utils/maps";
+
+.main__background {
+    padding: 3rem 0;
+    background-color: utils.$grey-lighter;
+}
+
+main {
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        margin-left: 5%;
+    }
+    .articles {
+        padding: 0 5% 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: white;
+    @include utils.simple-shadow;
+    &__img {
+        width: 100%;
+        height: 250px;
+        border-radius: 1rem 1rem 0 0;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        position: relative;
+    }
+    &__text {
+        h3 {
+            font-size: 0.9rem;
+        }
+        p {
+            font-weight: lighter;
+            font-size: 0.8rem;
+        }
+    }
+    &__like {
+        position: absolute;
+        font-size: 1.1rem;
+        top: 1.3rem;
+        right: 1.5rem;
+    }
+}
+
+//Component "New"
+.new {
+    &::before {
+        content: "Nouveau";
+        font-size: 0.8rem;
+        padding: 0.4em;
+        background-color: utils.$color-tertiary;
+        color: darken(utils.$color-tertiary, 50%);
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0.9rem;
+    }
+}
+
+//Component "Like"
+//Source https://cssgradient.io/blog/css-gradient-text/
+//property not supported officially
+//in original code "backgroud: -webkit-linear-gradient(#eee, #333);"
+.fill {
+    &:hover {
+    font-weight: 900;
+    background: utils.$linear-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+}
+
+@media (min-width: map-get($breakpoints, tablet)) {
+
+    main .articles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 2rem;
+        article {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: map-get($breakpoints, desktop)) {
+
+    .articles {
+        max-width: 1800px;
+        margin: 0 auto;
+        article {
+            width: 100%;
+        }
+    }
+}
+
