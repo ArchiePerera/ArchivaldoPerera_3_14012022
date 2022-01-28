@@ -553,14 +553,17 @@ footer a {
 }
 @media screen and (min-width: 1280px) {
   footer h4 {
-    margin-left: 20%;
+    max-width: 1800px;
+    margin: auto;
+    padding: 1rem 1%;
   }
 
   .footer__content {
-    max-width: 60%;
-    margin: auto;
     display: flex;
     justify-content: space-between;
+    max-width: 1800px;
+    margin: auto;
+    padding: 0 1%;
   }
   .footer__partnership ul {
     display: flex;

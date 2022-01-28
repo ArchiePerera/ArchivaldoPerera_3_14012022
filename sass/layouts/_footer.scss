@@ -46,15 +46,18 @@ footer {
 @media screen and (min-width: map-get($breakpoints, desktop)) {
     footer {
         h4 {
-            margin-left: 20%;
+            max-width: 1800px;
+            margin: auto;
+            padding: 1rem 1%;
         }
     }
     .footer {
         &__content {
-            max-width: 60%;
-            margin: auto;
             display: flex;
             justify-content: space-between;
+            max-width: 1800px;
+            margin: auto;
+            padding: 0 1%;
         }
         &__partnership ul {
             display: flex;
