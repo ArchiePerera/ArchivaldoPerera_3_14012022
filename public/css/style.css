@@ -37,7 +37,7 @@ a {
 .banner__header-return {
   position: absolute;
   font-size: 1.2rem;
-  left: 15%;
+  left: 1rem;
   top: 1rem;
 }
 .banner__header-return:hover {
@@ -78,6 +78,10 @@ a {
 }
 
 @media screen and (min-width: 1280px) {
+  .banner__header-return {
+    left: 15%;
+  }
+
   .location {
     max-width: 2000px;
     margin: auto;

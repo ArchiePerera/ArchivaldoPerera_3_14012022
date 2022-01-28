@@ -18,7 +18,7 @@
     &__header-return {
         position: absolute;
         font-size: 1.2rem;
-        left: 15%;
+        left: 1rem;
         top: 1rem;
         &:hover {
             font-size: 1.25rem;
@@ -63,6 +63,9 @@
 }
 
 @media screen and (min-width: map-get($breakpoints, desktop)) {
+    .banner__header-return {
+        left: 15%;
+    }
     .location {
         max-width: 2000px;
         margin: auto;
