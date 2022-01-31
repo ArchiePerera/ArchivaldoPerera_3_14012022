@@ -57,14 +57,16 @@
         margin: 1em 4%;
         padding: 0 1%;
         border-radius: 1rem;
+
         @include utils.simple-shadow;
         &-content {
             display: flex;
             justify-content: space-between;
-            padding: 1rem 1rem;
             &-text {
                 white-space: nowrap;
                 overflow: hidden;
+                width: 100%;
+                margin: 1rem 1rem;
                 h3 {
                     font-size: 0.8rem;
                     white-space: nowrap;
@@ -84,8 +86,19 @@
         &-price {
             display: flex;
             align-items: flex-end;
+            justify-content: end;
+            width: 100%;
             font-size: 0.7rem;
             font-weight: bold;
+            margin: 1rem 2rem 1rem 1rem;
+        }
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 9rem;
+            background-color: utils.$color-tertiary;
+            margin-right: -5rem;
         }
     }
 }

@@ -441,11 +441,12 @@ article .card .card__content .card__text p {
 .menu__card-content {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1rem;
 }
 .menu__card-content-text {
   white-space: nowrap;
   overflow: hidden;
+  width: 100%;
+  margin: 1rem 1rem;
 }
 .menu__card-content-text h3 {
   font-size: 0.8rem;
@@ -464,8 +465,19 @@ article .card .card__content .card__text p {
 .menu__card-price {
   display: flex;
   align-items: flex-end;
+  justify-content: end;
+  width: 100%;
   font-size: 0.7rem;
   font-weight: bold;
+  margin: 1rem 2rem 1rem 1rem;
+}
+.menu__card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  background-color: #99E2D0;
+  margin-right: -5rem;
 }
 
 .main__order {
