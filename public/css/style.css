@@ -81,11 +81,6 @@ a {
   .banner__header-return {
     left: 15%;
   }
-
-  .location {
-    max-width: 2000px;
-    margin: auto;
-  }
 }
 .hero {
   background-color: #F6F6F6;
@@ -150,10 +145,10 @@ a {
   }
 }
 @media (min-width: 1280px) {
-  .hero {
-    max-width: 2000px;
-    margin: auto;
-    border-radius: 0 0 1rem 1rem;
+  .hero__wrapper {
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto;
   }
   .hero__text h1 {
     font-size: 1.7rem;
@@ -169,9 +164,13 @@ nav {
   width: 90%;
   margin: 3rem auto;
 }
-nav .function h2 {
+nav h2 {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+}
+nav .function {
+  max-width: 1800px;
+  margin: 0 auto;
 }
 nav .function ol {
   list-style: none;
@@ -240,7 +239,7 @@ nav .function__btn:hover {
 @media (min-width: 768px) {
   ol li {
     justify-content: center;
-    min-width: 375px;
+    min-width: 340px;
   }
 
   nav .function button span {
@@ -250,7 +249,7 @@ nav .function__btn:hover {
 }
 @media (min-width: 1280px) {
   nav {
-    max-width: 1800px;
+    max-width: 1640px;
     margin: 3rem auto;
   }
   nav h2 {
@@ -558,7 +557,7 @@ footer a {
 }
 @media screen and (min-width: 1280px) {
   footer h4 {
-    width: 60%;
+    max-width: 1800px;
     margin: auto;
     padding: 1rem 1%;
   }
@@ -566,7 +565,7 @@ footer a {
   .footer__content {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    max-width: 1800px;
     margin: auto;
     padding: 0 1%;
   }

@@ -58,9 +58,11 @@
 
 @media (min-width: map-get($breakpoints, desktop)) {
     .hero {
-        max-width: 2000px;
-        margin: auto;
-        border-radius: 0 0 1rem 1rem;
+        &__wrapper {
+            justify-content: space-around;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
         &__text{
             h1 {
                 font-size: 1.7rem;

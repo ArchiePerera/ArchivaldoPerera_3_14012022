@@ -5,11 +5,13 @@
 nav{
     width: 90%;
     margin: 3rem auto;
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
     .function {
-        h2 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
+        max-width: 1800px;
+        margin: 0 auto;
         ol {
             list-style: none;
             counter-reset: listCounter;
@@ -74,7 +76,7 @@ nav{
     ol {
         li {
             justify-content: center;
-            min-width: 375px;
+            min-width: 340px;
         }
     }
     nav .function button span {
@@ -86,7 +88,7 @@ nav{
 
 @media (min-width: map-get($breakpoints, desktop)) {
     nav {
-        max-width: 1800px;
+        max-width: 1640px;
         margin: 3rem auto;
         h2 {
             width: 100%;
