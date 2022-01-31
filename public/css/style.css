@@ -604,16 +604,12 @@ footer a {
 }
 @media screen and (min-width: 1280px) {
   footer h4 {
-    max-width: 1800px;
-    margin: auto;
     padding: 1rem 1%;
   }
 
   .footer__content {
     display: flex;
     justify-content: space-between;
-    max-width: 1800px;
-    margin: auto;
     padding: 0 1%;
   }
   .footer__partnership ul {
