@@ -58,7 +58,7 @@ main {
         position: absolute;
         font-size: 1.1rem;
         top: 1.3rem;
-        right: 1.5rem;
+        right: 1.5rem;       
     }
 }
 
@@ -86,9 +86,11 @@ main {
 .fill {
     &:hover {
     font-weight: 900;
-    background: utils.$linear-gradient;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition-duration: 1s;
     }
 }
 
