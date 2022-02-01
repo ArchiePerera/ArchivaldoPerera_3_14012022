@@ -50,6 +50,7 @@
             display: flex;
             align-items: center;
             font-size: 1.2rem;
+            cursor: pointer;
         }
     }
     &__starter, &__middle, &__end {
@@ -84,6 +85,7 @@
         @include utils.simple-shadow;
         @include utils.desktop {
         margin: 1em 20%;
+        cursor: pointer;
         }
         &-content {
             display: flex;
@@ -177,6 +179,9 @@
 }
 .menu__starter > :nth-child(4) {
     animation: appear 1s ease-in-out;
+}
+.menu__starter > :nth-child(5) {
+    animation: appear 1.5s ease-in-out;
 }
 .menu__middle > :nth-child(2) {
     animation: appear 1s ease-in-out;
