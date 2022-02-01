@@ -64,35 +64,12 @@ main {
 
 //Component "New"
 .new {
-    &::before {
-        content: "Nouveau";
-        font-size: 0.9rem;
-        font-weight: bold;
-        padding: 0.7em;
-        border-radius: 0.5rem;
-        background-color: utils.$color-tertiary;
-        color: darken(utils.$color-tertiary, 40%);
-        position: absolute;
-        right: 0;
-        top: 0;
-        margin: 0.9rem;
-    }
+    @include utils.new;
 }
 
 //Component "Like"
-//Source https://cssgradient.io/blog/css-gradient-text/
-//property not supported officially
-//in original code "backgroud: -webkit-linear-gradient(#eee, #333);"
 .fill {
-    &:hover {
-    font-weight: 900;
-    color: whitesmoke;
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-    transition-duration: 1.5s;
-    }
+    @include utils.like;
 }
 
 @media (min-width: map-get($breakpoints, tablet)) {

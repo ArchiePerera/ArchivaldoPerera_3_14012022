@@ -59,20 +59,7 @@
         border-radius: 1rem;
         max-width: 100%;
         overflow: hidden;
-        &:hover .icon{
-            transform: translateX(-6rem);
-            transition-duration: 0.5s;
-            transition-timing-function: ease;
-            .fa-check {
-                transform: rotate(360deg);
-                transition-duration: 0.5s;
-            }
-        }
-        &:hover .menu__card-price {
-            margin-right: 4rem;
-            transition-duration: 0.5s;
-            transition-timing-function: ease;
-        }
+        @include utils.checked;
         @include utils.simple-shadow;
         &-content {
             display: flex;
@@ -81,7 +68,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 width: 100%;
-                margin: 1rem auto 1rem 1rem;
+                margin: 1rem 1rem 1rem 1rem;
                 h3 {
                     font-size: 0.8rem;
                     white-space: nowrap;
@@ -105,7 +92,7 @@
             font-size: 0.7rem;
             font-weight: bold;
             padding: 0 3rem 1rem 0;
-            transition-duration: 0.5s;
+            transition-duration: 0.8s;
             transition-timing-function: ease;
         }
         .icon {
@@ -115,6 +102,8 @@
             justify-content: center;
             align-items: center;
             margin-right: -7rem;
+            border: 5px utils.$color-tertiary solid;
+            opacity: 0;
             transition-duration: 0.5s;
             transition-timing-function: ease;
             .fa-check {

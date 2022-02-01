@@ -32,3 +32,56 @@
     @include material-shadow;
 }
 
+//Components
+
+//New
+@mixin new {
+    &::before {
+        content: "Nouveau";
+        font-size: 0.9rem;
+        font-weight: bold;
+        padding: 0.7em;
+        border-radius: 0.5rem;
+        background-color: variables.$color-tertiary;
+        color: darken(variables.$color-tertiary, 40%);
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0.9rem;
+    }
+}
+
+//Like
+//Source https://cssgradient.io/blog/css-gradient-text/
+//property not supported officially
+//in original code "backgroud: -webkit-linear-gradient(#eee, #333);"
+@mixin like {
+    &:hover {
+        font-weight: 900;
+        color: whitesmoke;
+        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        transition-duration: 1.5s;
+        }
+}
+
+//Checked
+@mixin checked {
+    &:hover .icon{
+        transform: translateX(-6rem);
+        opacity: 1;
+        transition-duration: 0.8s;
+        transition-timing-function: ease;
+        .fa-check {
+            transform: rotate(360deg);
+            transition-duration: 0.5s;
+        }
+    }
+    &:hover .menu__card-price {
+        margin-right: 4rem;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+    }   
+}

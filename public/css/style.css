@@ -347,7 +347,6 @@ main .articles {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 1;
   transition-duration: 1.5s;
 }
 
@@ -445,7 +444,8 @@ article .card .card__content .card__text p {
 }
 .menu__card:hover .icon {
   transform: translateX(-6rem);
-  transition-duration: 0.5s;
+  opacity: 1;
+  transition-duration: 0.8s;
   transition-timing-function: ease;
 }
 .menu__card:hover .icon .fa-check {
@@ -465,7 +465,7 @@ article .card .card__content .card__text p {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-  margin: 1rem auto 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 .menu__card-content-text h3 {
   font-size: 0.8rem;
@@ -488,7 +488,7 @@ article .card .card__content .card__text p {
   font-size: 0.7rem;
   font-weight: bold;
   padding: 0 3rem 1rem 0;
-  transition-duration: 0.5s;
+  transition-duration: 0.8s;
   transition-timing-function: ease;
 }
 .menu__card .icon {
@@ -498,6 +498,8 @@ article .card .card__content .card__text p {
   justify-content: center;
   align-items: center;
   margin-right: -7rem;
+  border: 5px #99E2D0 solid;
+  opacity: 0;
   transition-duration: 0.5s;
   transition-timing-function: ease;
 }
