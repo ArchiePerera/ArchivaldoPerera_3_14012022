@@ -343,11 +343,12 @@ main .articles {
 
 .fill:hover {
   font-weight: 900;
+  color: whitesmoke;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
-  transition-duration: 1s;
+  transition-duration: 1.5s;
 }
 
 @media (min-width: 768px) {
@@ -452,7 +453,7 @@ article .card .card__content .card__text p {
   transition-duration: 0.5s;
 }
 .menu__card:hover .menu__card-price {
-  margin-right: 6rem;
+  margin-right: 4rem;
   transition-duration: 0.5s;
   transition-timing-function: ease;
 }

@@ -86,11 +86,12 @@ main {
 .fill {
     &:hover {
     font-weight: 900;
+    color: whitesmoke;
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
-    transition-duration: 1s;
+    transition-duration: 1.5s;
     }
 }
 
