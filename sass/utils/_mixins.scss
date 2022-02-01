@@ -1,4 +1,5 @@
 @use "./variables";
+@use "./maps";
 
 //Location section inner shadow
 @mixin inset-shadow {
@@ -22,9 +23,9 @@
 
 //Button submission
 @mixin btn-submit {
-    padding: 0.7rem 1.5rem;
+    padding: 0.9em 1.1em;
     border: none;
-    border-radius: 25px;
+    border-radius: 1.5rem;
     background-image: variables.$linear-gradient;
     font-weight: bold;
     font-size: 0.8rem;
@@ -54,7 +55,7 @@
 //Like
 //Source https://cssgradient.io/blog/css-gradient-text/
 //property not supported officially
-//in original code "backgroud: -webkit-linear-gradient(#eee, #333);"
+//in original code "background: -webkit-linear-gradient(#eee, #333);"
 @mixin like {
     &:hover {
         font-weight: 900;
@@ -84,4 +85,17 @@
         transition-duration: 0.5s;
         transition-timing-function: ease;
     }   
+}
+
+//media queries
+@mixin desktop {
+    @media screen and (min-width: map-get(maps.$breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (min-width: map-get(maps.$breakpoints,largest)) {
+        @content;
+    }
 }

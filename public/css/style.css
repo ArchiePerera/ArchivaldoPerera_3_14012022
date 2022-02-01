@@ -107,9 +107,9 @@ a {
   justify-content: center;
 }
 .hero__btn .btn-submit {
-  padding: 0.7rem 1.5rem;
+  padding: 0.9em 1.1em;
   border: none;
-  border-radius: 25px;
+  border-radius: 1.5rem;
   background-image: linear-gradient(180deg, rgba(255, 121, 218, 0.9066760493) 14%, rgba(147, 86, 220, 0.7442110633) 99%);
   font-weight: bold;
   font-size: 0.8rem;
@@ -394,6 +394,19 @@ article .card .card__content .card__text p {
   height: 30vh;
   object-fit: cover;
 }
+@media screen and (min-width: 1280px) {
+  .title__img {
+    width: 70%;
+    margin: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .title__img img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+}
 
 .menu {
   margin: -3rem auto 0;
@@ -403,6 +416,11 @@ article .card .card__content .card__text p {
   width: 90%;
   z-index: 1;
   position: relative;
+}
+@media screen and (min-width: 1280px) {
+  .menu {
+    width: 60%;
+  }
 }
 .menu__name {
   border-radius: 1rem 1rem 0 0;
@@ -433,6 +451,11 @@ article .card .card__content .card__text p {
   height: 3px;
   width: 4ch;
 }
+@media screen and (min-width: 1280px) {
+  .menu__starter h2, .menu__middle h2, .menu__end h2 {
+    margin: 2rem 20%;
+  }
+}
 .menu__card {
   background-color: white;
   margin: 1em 4%;
@@ -456,6 +479,11 @@ article .card .card__content .card__text p {
   margin-right: 4rem;
   transition-duration: 0.5s;
   transition-timing-function: ease;
+}
+@media screen and (min-width: 1280px) {
+  .menu__card {
+    margin: 1em 20%;
+  }
 }
 .menu__card-content {
   display: flex;
@@ -481,6 +509,14 @@ article .card .card__content .card__text p {
   font-weight: lighter;
   text-overflow: ellipsis;
 }
+@media screen and (min-width: 1280px) {
+  .menu__card-content-text h3 {
+    font-size: 1rem;
+  }
+  .menu__card-content-text p {
+    font-size: 0.9rem;
+  }
+}
 .menu__card-price {
   display: flex;
   justify-content: end;
@@ -503,6 +539,11 @@ article .card .card__content .card__text p {
   transition-duration: 0.5s;
   transition-timing-function: ease;
 }
+@media screen and (min-width: 1280px) {
+  .menu__card .icon {
+    margin-right: -7.7rem;
+  }
+}
 .menu__card .icon .fa-check {
   background-color: white;
   border-radius: 1rem;
@@ -511,6 +552,16 @@ article .card .card__content .card__text p {
   color: #99E2D0;
   transition-duration: 0.5s;
 }
+@media screen and (min-width: 1280px) {
+  .menu__card .icon .fa-check {
+    margin-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .menu__card .icon .fa-check {
+    margin-right: 1rem;
+  }
+}
 
 .main__order {
   display: flex;
@@ -518,9 +569,9 @@ article .card .card__content .card__text p {
   margin: 5rem auto;
 }
 .main__order .btn-submit {
-  padding: 0.7rem 1.5rem;
+  padding: 0.9em 1.1em;
   border: none;
-  border-radius: 25px;
+  border-radius: 1.5rem;
   background-image: linear-gradient(180deg, rgba(255, 121, 218, 0.9066760493) 14%, rgba(147, 86, 220, 0.7442110633) 99%);
   font-weight: bold;
   font-size: 0.8rem;
@@ -534,39 +585,50 @@ article .card .card__content .card__text p {
   opacity: 0.85;
 }
 
-@media screen and (min-width: 1280px) {
-  .title__img {
-    width: 70%;
-    margin: auto;
-    border-radius: 1rem;
-    overflow: hidden;
-  }
-  .title__img img {
-    width: 100%;
-    height: 30vh;
-    object-fit: cover;
-  }
+.menu__starter > :nth-child(2) {
+  animation: appear 0.5s ease-in-out;
+}
 
-  .menu {
-    width: 60%;
+.menu__starter > :nth-child(3) {
+  animation: appear 0.75s ease-in-out;
+}
+
+.menu__starter > :nth-child(4) {
+  animation: appear 1s ease-in-out;
+}
+
+.menu__middle > :nth-child(2) {
+  animation: appear 1s ease-in-out;
+}
+
+.menu__middle > :nth-child(3) {
+  animation: appear 1.5s ease-in-out;
+}
+
+.menu__middle > :nth-child(4) {
+  animation: appear 2s ease-in-out;
+}
+
+.menu__end > :nth-child(2) {
+  animation: appear 2s ease-in-out;
+}
+
+.menu__end > :nth-child(3) {
+  animation: appear 2.5s ease-in-out;
+}
+
+.menu__end > :nth-child(4) {
+  animation: appear 3s ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
   }
-  .menu__starter h2, .menu__middle h2, .menu__end h2 {
-    margin: 2rem 20%;
-  }
-  .menu__card {
-    margin: 1em 20%;
-  }
-  .menu__card h3 {
-    font-size: 1rem;
-  }
-  .menu__card p {
-    font-size: 0.9rem;
-  }
-  .menu__card .icon {
-    margin-right: -7.7rem;
-  }
-  .menu__card .icon .fa-check {
-    margin-right: 1rem;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 footer {

@@ -11,6 +11,19 @@
             object-fit: cover;
         }
     }
+    @include utils.desktop {
+        &__img {
+            width: 70%;
+            margin: auto;
+            border-radius: 1rem;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 30vh;
+                object-fit: cover;
+            }
+        }
+    }
 }
 
 .menu {
@@ -19,6 +32,9 @@
     background-color: utils.$grey-lighter;
     border-radius: 1rem 1rem 0 0;
     width: 90%;
+    @include utils.desktop {
+        width: 60%;
+    }
     z-index: 1;
     position: relative;
     &__name {
@@ -51,6 +67,11 @@
                 width: 4ch;
             }
         }
+        @include utils.desktop {
+            h2 {
+                margin: 2rem 20%;
+            }
+        }
     }
     &__card {
         background-color: white;
@@ -61,6 +82,9 @@
         overflow: hidden;
         @include utils.checked;
         @include utils.simple-shadow;
+        @include utils.desktop {
+        margin: 1em 20%;
+        }
         &-content {
             display: flex;
             justify-content: space-between;
@@ -82,6 +106,14 @@
                     overflow: hidden;
                     font-weight: lighter;
                     text-overflow: ellipsis;
+                }
+                @include utils.desktop {
+                    h3 {
+                        font-size: 1rem;
+                    }
+                    p {
+                        font-size: 0.9rem;
+                    }
                 }
             }
         }
@@ -106,6 +138,9 @@
             opacity: 0;
             transition-duration: 0.5s;
             transition-timing-function: ease;
+            @include utils.desktop {
+                margin-right: -7.7rem;
+            }
             .fa-check {
                 background-color: white;
                 border-radius: 1rem;
@@ -113,6 +148,12 @@
                 margin-right: 1rem;
                 color: utils.$color-tertiary;
                 transition-duration: 0.5s;
+                @include utils.desktop {
+                    margin-right: 1.5rem;
+                }
+                @include utils.large {
+                    margin-right: 1rem;
+                }
             }
         }
     }
@@ -127,42 +168,42 @@
     }
 }
 
-@media screen and (min-width: map-get($breakpoints, desktop)) {
-    .title {
-        &__img {
-            width: 70%;
-            margin: auto;
-            border-radius: 1rem;
-            overflow: hidden;
-            img {
-                width: 100%;
-                height: 30vh;
-                object-fit: cover;
-            }
-        }
+//animation
+.menu__starter > :nth-child(2) {
+    animation: appear 0.5s ease-in-out;
+}
+.menu__starter > :nth-child(3) {
+    animation: appear 0.75s ease-in-out;
+}
+.menu__starter > :nth-child(4) {
+    animation: appear 1s ease-in-out;
+}
+.menu__middle > :nth-child(2) {
+    animation: appear 1s ease-in-out;
+}
+.menu__middle > :nth-child(3) {
+    animation: appear 1.5s ease-in-out;
+}
+.menu__middle > :nth-child(4) {
+    animation: appear 2s ease-in-out;
+}
+.menu__end > :nth-child(2) {
+    animation: appear 2s ease-in-out;
+}
+.menu__end > :nth-child(3) {
+    animation: appear 2.5s ease-in-out;
+}
+.menu__end > :nth-child(4) {
+    animation: appear 3s ease-in-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem)
     }
-    
-    .menu {
-        width: 60%;
-        &__starter, &__middle, &__end {
-            h2 {
-                margin: 2rem 20%;
-            }
-        }
-        &__card {
-            margin: 1em 20%;
-            h3 {
-                font-size: 1rem;
-            }
-            p {
-                font-size: 0.9rem;
-            }
-            .icon {
-                margin-right: -7.7rem;
-                .fa-check {
-                    margin-right: 1rem;
-                }
-            }
-        }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
