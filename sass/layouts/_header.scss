@@ -13,13 +13,17 @@
         font-size: 2rem;
         font-weight: bold;
         font-stretch: condensed;
-        padding: 0.4rem 0; 
+        padding: 0.4rem 0;
+        cursor: pointer;
     }
     &__header-return {
         position: absolute;
         font-size: 1.2rem;
-        left: 0.5rem;
-        top: 1rem; 
+        left: 1rem;
+        top: 1rem;
+        &:hover {
+            font-size: 1.25rem;
+        }
     }
     a {
         color: black;
@@ -40,6 +44,7 @@
             border: none;
             padding-top: 0.15rem;
             background-color: transparent;
+            cursor: pointer;
             &::placeholder {
                 font-size: 0.85rem;
                 font-weight: bold;
@@ -56,4 +61,11 @@
         font-size: 0.8rem;
         margin-left: 4rem;
     }
+}
+
+@media screen and (min-width: map-get($breakpoints, desktop)) {
+    .banner__header-return {
+        left: 15%;
+    }
+
 }

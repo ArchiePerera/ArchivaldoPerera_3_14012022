@@ -11,6 +11,19 @@
             object-fit: cover;
         }
     }
+    @include utils.desktop {
+        &__img {
+            width: 70%;
+            margin: auto;
+            border-radius: 1rem;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 30vh;
+                object-fit: cover;
+            }
+        }
+    }
 }
 
 .menu {
@@ -18,7 +31,10 @@
     padding-bottom: 3rem;
     background-color: utils.$grey-lighter;
     border-radius: 1rem 1rem 0 0;
-    width: 90%;
+    width: 100%;
+    @include utils.desktop {
+        width: 60%;
+    }
     z-index: 1;
     position: relative;
     &__name {
@@ -34,6 +50,7 @@
             display: flex;
             align-items: center;
             font-size: 1.2rem;
+            cursor: pointer;
         }
     }
     &__starter, &__middle, &__end {
@@ -51,20 +68,33 @@
                 width: 4ch;
             }
         }
+        @include utils.desktop {
+            h2 {
+                margin: 2rem 20%;
+            }
+        }
     }
     &__card {
         background-color: white;
-        margin: 1em 4%;
-        padding: 0 1%;
+        margin: 1rem 2rem;
+        padding: 0 1rem;
         border-radius: 1rem;
+        max-width: 100%;
+        overflow: hidden;
+        @include utils.checked;
         @include utils.simple-shadow;
+        @include utils.desktop {
+        margin: 1em 20%;
+        cursor: pointer;
+        }
         &-content {
             display: flex;
             justify-content: space-between;
-            padding: 1rem 1rem;
             &-text {
                 white-space: nowrap;
                 overflow: hidden;
+                width: 100%;
+                margin: 1rem 1rem 1rem 1rem;
                 h3 {
                     font-size: 0.8rem;
                     white-space: nowrap;
@@ -79,13 +109,45 @@
                     font-weight: lighter;
                     text-overflow: ellipsis;
                 }
+                @include utils.desktop {
+                    h3 {
+                        font-size: 1rem;
+                    }
+                    p {
+                        font-size: 0.9rem;
+                    }
+                }
             }
         }
         &-price {
             display: flex;
+            justify-content: end;
             align-items: flex-end;
             font-size: 0.7rem;
             font-weight: bold;
+            padding: 0 3rem 1rem 0;
+            transition-duration: 0.8s;
+            transition-timing-function: ease;
+        }
+        .icon {
+            width: 5rem;
+            background: #99e2d0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: -7rem;
+            margin-left: 1rem;
+            border: 5px utils.$color-tertiary solid;
+            opacity: 0;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+            .fa-check {
+                background-color: white;
+                border-radius: 1rem;
+                padding: 0.5rem;
+                color: utils.$color-tertiary;
+                transition-duration: 0.5s;
+            }
         }
     }
 }
@@ -99,16 +161,45 @@
     }
 }
 
-@media screen and (min-width: map-get($breakpoints, desktop)) {
-    .menu {
-        width: 60%;
-        &__starter, &__middle, &__end {
-            h2 {
-                margin: 2rem 20%;
-            }
-        }
-        &__card {
-            margin: 1em 20%;
-        }
+//animation
+.menu__starter > :nth-child(2) {
+    animation: appear 0.5s ease-in-out;
+}
+.menu__starter > :nth-child(3) {
+    animation: appear 0.75s ease-in-out;
+}
+.menu__starter > :nth-child(4) {
+    animation: appear 1s ease-in-out;
+}
+.menu__starter > :nth-child(5) {
+    animation: appear 1.5s ease-in-out;
+}
+.menu__middle > :nth-child(2) {
+    animation: appear 1s ease-in-out;
+}
+.menu__middle > :nth-child(3) {
+    animation: appear 1.5s ease-in-out;
+}
+.menu__middle > :nth-child(4) {
+    animation: appear 2s ease-in-out;
+}
+.menu__end > :nth-child(2) {
+    animation: appear 2s ease-in-out;
+}
+.menu__end > :nth-child(3) {
+    animation: appear 2.5s ease-in-out;
+}
+.menu__end > :nth-child(4) {
+    animation: appear 3s ease-in-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

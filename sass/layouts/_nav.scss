@@ -5,11 +5,13 @@
 nav{
     width: 90%;
     margin: 3rem auto;
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
     .function {
-        h2 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
+        max-width: 1800px;
+        margin: 0 auto;
         ol {
             list-style: none;
             counter-reset: listCounter;
@@ -58,7 +60,8 @@ nav{
             }
             span {
                 padding-left: 5rem;
-                font-size: 0.75rem;   
+                font-size: 0.75rem;
+                cursor: pointer;  
             }
         }
         &__btn {
@@ -74,17 +77,25 @@ nav{
     ol {
         li {
             justify-content: center;
-            min-width: 375px;
+            min-width: 340px;
         }
     }
     nav .function button span {
-        padding-left: 0;
         font-size: 0.8rem;
+        padding-left: 0;
     }
 }
 
 
 @media (min-width: map-get($breakpoints, desktop)) {
+    nav {
+        max-width: 1640px;
+        margin: 3rem auto;
+        h2 {
+            width: 100%;
+        }
+    }
+    
     ol {
         display: flex;
         gap: 3rem;
@@ -97,7 +108,9 @@ nav{
     }
 
     nav .function button span {
-        padding-left: 0;
+        padding-left: 1rem;
         font-size: 0.9rem;
     }
 }
+
+
