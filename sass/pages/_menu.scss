@@ -31,7 +31,7 @@
     padding-bottom: 3rem;
     background-color: utils.$grey-lighter;
     border-radius: 1rem 1rem 0 0;
-    width: 90%;
+    width: 100%;
     @include utils.desktop {
         width: 60%;
     }
@@ -76,8 +76,8 @@
     }
     &__card {
         background-color: white;
-        margin: 1em 4%;
-        padding: 0 1%;
+        margin: 1rem 2rem;
+        padding: 0 1rem;
         border-radius: 1rem;
         max-width: 100%;
         overflow: hidden;
@@ -130,32 +130,23 @@
             transition-timing-function: ease;
         }
         .icon {
-            width: 7rem;
+            width: 5rem;
             background: #99e2d0;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-right: -7rem;
+            margin-left: 1rem;
             border: 5px utils.$color-tertiary solid;
             opacity: 0;
             transition-duration: 0.5s;
             transition-timing-function: ease;
-            @include utils.desktop {
-                margin-right: -7.7rem;
-            }
             .fa-check {
                 background-color: white;
                 border-radius: 1rem;
                 padding: 0.5rem;
-                margin-right: 1rem;
                 color: utils.$color-tertiary;
                 transition-duration: 0.5s;
-                @include utils.desktop {
-                    margin-right: 1.5rem;
-                }
-                @include utils.large {
-                    margin-right: 1rem;
-                }
             }
         }
     }
