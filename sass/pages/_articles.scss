@@ -39,7 +39,6 @@ main {
             padding: 0 5% 5rem;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
             gap: 1rem;
             @include utils.tablet {
                 display: grid;
