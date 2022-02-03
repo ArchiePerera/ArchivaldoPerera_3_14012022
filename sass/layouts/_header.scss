@@ -1,11 +1,8 @@
 @use "../utils";
-//@use not working with maps
-@import "../utils/maps";
 
 //Header
 .banner {
     width: 100%;
-    min-width: map-get($breakpoints, mobile);
     display: flex;
     justify-content: center;
     position: relative;
@@ -21,6 +18,9 @@
         font-size: 1.2rem;
         left: 1rem;
         top: 1rem;
+        @include utils.desktop {
+            left: 15%;
+        }
         &:hover {
             font-size: 1.25rem;
         }
@@ -61,11 +61,4 @@
         font-size: 0.8rem;
         margin-left: 4rem;
     }
-}
-
-@media screen and (min-width: map-get($breakpoints, desktop)) {
-    .banner__header-return {
-        left: 15%;
-    }
-
 }

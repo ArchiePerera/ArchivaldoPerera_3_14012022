@@ -1,27 +1,71 @@
 @use "../utils";
-//@use not working with maps
-@import "../utils/maps";
 
-.main__background {
-    padding: 3rem 0;
-    background-color: utils.$grey-lighter;
+
+//Loader
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 2;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    animation: disappear 3s ease-in-out forwards;
+    @include utils.loader;
 }
 
+//Index layout
 main {
-    h2 {
-        font-size: 1.2rem;
-        margin-bottom: 3rem;
-        margin-left: 5%;
-    }
-    .articles {
-        padding: 0 5% 5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: 1rem;
+    .main__background {
+        padding: 3rem 0;
+        background-color: utils.$grey-lighter;
+        @include utils.desktop {
+            max-width: 1800px;
+            margin: 0 auto;
+            border-radius: 1rem 1rem 0 0;
+        }
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            margin-left: 5%;
+            @include utils.desktop {
+                margin-left: 5%;
+            }
+        }
+        .articles {
+            padding: 0 5% 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 1rem;
+            @include utils.tablet {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                gap: 2rem;
+            }
+            @include utils.desktop {
+                padding: 0 2%;
+            }
+                article {
+                    width: 100%;
+                    @include utils.desktop {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    @include utils.desktop {
+        max-width: 1800px;
+        margin: 0 auto;
+        padding: 0;
     }
 }
 
+//Cards layout
 .card {
     border-radius: 1rem;
     background-color: white;
@@ -41,17 +85,16 @@ main {
     }
     &__content {
         display: flex;
-        justify-content: space-around;
         padding: 1em;
         position: relative;
     }
     &__text {
         h3 {
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
         p {
             font-weight: lighter;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
     }
     &__like {
@@ -61,112 +104,3 @@ main {
         right: 1.5rem;       
     }
 }
-
-//Component "New"
-.new {
-    @include utils.new;
-}
-
-//Component "Like"
-.fill {
-    @include utils.like;
-}
-
-@media (min-width: map-get($breakpoints, tablet)) {
-
-    main {
-        .articles {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        gap: 2rem;
-        article {
-            width: 100%;
-            }
-        }
-    }
-}
-
-@media (min-width: map-get($breakpoints, desktop)) {
-    .main__background {
-        max-width: 1800px;
-        margin: 0 auto;
-        border-radius: 1rem 1rem 0 0;
-        main {
-            h2 {
-                margin-left: 2%;
-            }
-            max-width: 1800px;
-            margin: 0 auto;
-            padding: 0;
-            .articles {
-                padding: 0 2%;
-                article {
-                    width: 100%;
-                }
-            }
-        }
-    }
-}
-
-article .card .card__content .card__text{
-    h3 {
-        font-size: 1rem;
-    }
-    p {
-        font-size: 0.9rem;
-    }
-}
-
-.container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    animation: disappear 3s ease-in-out forwards;
-    &__loader {
-        width: 120px;
-        height: 120px;
-        border: 3px solid utils.$color-primary;
-        border-radius: 50%;
-        border-top-color: utils.$color-tertiary;
-        border-bottom-color: utils.$color-secondary;
-        border-left-color: utils.$color-primary-light;
-        position: absolute;
-        top: 30%;
-        animation: spin 1s ease-in-out 3;
-    }
-}
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-          
-        }
-        
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes disappear {
-        50% {
-            opacity: 0.5;
-        }
-
-        90% {
-            transform: translateY(0%);
-        }
-        100% {
-            opacity: 0;
-            transform: translateY(-100%);
-        }
-    }
-
-    

@@ -1,6 +1,8 @@
 @use "./variables";
 @use "./maps";
 
+//Design
+
 //Location section inner shadow
 @mixin inset-shadow {
     box-shadow: inset 0 2px 3px -1px rgba(123, 123, 123, 0.3);
@@ -55,17 +57,16 @@
 //Like
 //Source https://cssgradient.io/blog/css-gradient-text/
 //property not supported officially
-//in original code "background: -webkit-linear-gradient(#eee, #333);"
 @mixin like {
     &:hover {
         font-weight: 900;
-        color: whitesmoke;
         background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-        background: -webkit-linear-gradient(#9356DC, #FF79DA);
+        background-clip: text;
         -webkit-background-clip: text;
+        color: transparent;
         -webkit-text-fill-color: transparent;
-        -webkit-transition-duration: 1.5s;
-        transition-duration: 1.5s;
+        transition-duration: 1s;
+        -webkit-transition-duration: 1s;
         }
 }
 
@@ -88,9 +89,91 @@
     }   
 }
 
+//Loader
+@mixin loader {
+    &__loader {
+        width: 120px;
+        height: 120px;
+        border: 3px solid variables.$color-primary;
+        border-radius: 50%;
+        border-top-color: variables.$color-tertiary;
+        border-bottom-color: variables.$color-secondary;
+        border-left-color: variables.$color-primary-light;
+        position: absolute;
+        top: 30%;
+        animation: spin 1s ease-in-out 3;
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);       
+        }   
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes disappear {
+        50% {
+            opacity: 0.5;
+        }
+        90% {
+            transform: translateY(0%);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+    }
+}
+
+//animation appearance menu
+@mixin appear {
+    .menu__starter > :nth-child(2) {
+        animation: appear 0.5s ease-in-out;
+    }
+    .menu__starter > :nth-child(3) {
+        animation: appear 0.75s ease-in-out;
+    }
+    .menu__starter > :nth-child(4) {
+        animation: appear 1s ease-in-out;
+    }
+    .menu__starter > :nth-child(5) {
+        animation: appear 1.5s ease-in-out;
+    }
+    .menu__middle > :nth-child(2) {
+        animation: appear 1s ease-in-out;
+    }
+    .menu__middle > :nth-child(3) {
+        animation: appear 1.5s ease-in-out;
+    }
+    .menu__middle > :nth-child(4) {
+        animation: appear 2s ease-in-out;
+    }
+    .menu__end > :nth-child(2) {
+        animation: appear 2s ease-in-out;
+    }
+    .menu__end > :nth-child(3) {
+        animation: appear 2.5s ease-in-out;
+    }
+    .menu__end > :nth-child(4) {
+        animation: appear 3s ease-in-out;
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: translateY(3rem)
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
 //media queries
+
 @mixin tablet {
-    @media screen and (min-width: map-get(maps.$breakpoints, desktop)) {
+    @media screen and (min-width: map-get(maps.$breakpoints, tablet)) {
         @content;
     }
 }

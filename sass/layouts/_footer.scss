@@ -2,6 +2,8 @@
 //@use not working with maps
 @import "../utils/maps";
 
+//General layout
+
 footer {
     color: white;
     background-color: utils.$grey-darker;
@@ -9,6 +11,9 @@ footer {
     & h4 {
         padding: 1rem 0 1rem 0;
         margin-left: 5%;
+        @include utils.desktop {
+            padding: 1rem 1%;
+        }
     }
     & ul {
         list-style: none;
@@ -24,6 +29,8 @@ footer {
     }
 }
 
+//Content layout
+
 .footer {
     &__content {
         margin: 0 5%;    
@@ -31,26 +38,14 @@ footer {
     &__site-info {
         font-weight: lighter;
     }
-}
-
-@media screen and (min-width: map-get($breakpoints, tablet)) {
-    .footer {
+    @include utils.tablet {
         &__content {
             margin: 0 5%;
             display: flex;
             justify-content: space-around;
         }
     }
-}
-
-@media screen and (min-width: map-get($breakpoints, desktop)) {
-    footer {
-        h4 {
-
-            padding: 1rem 1%;
-        }
-    }
-    .footer {
+    @include utils.desktop {
         &__content {
             display: flex;
             justify-content: space-between;
