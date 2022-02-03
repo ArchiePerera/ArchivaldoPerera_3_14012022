@@ -525,7 +525,7 @@ main .main__background .articles article {
 }
 .menu__card {
   background-color: white;
-  margin: 1rem 2rem;
+  margin: 1rem 2%;
   padding: 0 1rem;
   border-radius: 1rem;
   max-width: 100%;
