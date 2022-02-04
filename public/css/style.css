@@ -363,7 +363,7 @@ nav .function__btn:hover {
 }
 
 main .main__background {
-  padding: 3rem 0;
+  padding: 3rem 0 1rem 0;
   background-color: #F6F6F6;
 }
 @media screen and (min-width: 1280px) {
@@ -384,7 +384,7 @@ main .main__background h2 {
   }
 }
 main .main__background .articles {
-  padding: 0 5% 5rem;
+  padding: 0 5% 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -425,10 +425,15 @@ main .main__background .articles article {
 }
 .card__img {
   width: 100%;
-  height: 250px;
+  height: 200px;
   border-radius: 1rem 1rem 0 0;
   overflow: hidden;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .card__img {
+    height: 250px;
+  }
 }
 .card__img img {
   width: 100%;
@@ -587,7 +592,7 @@ main .main__background .articles article {
 }
 .menu__card-price {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: flex-end;
   font-size: 0.7rem;
   font-weight: bold;
